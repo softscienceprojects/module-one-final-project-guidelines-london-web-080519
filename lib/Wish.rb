@@ -1,9 +1,9 @@
 class Wish
-    attr_reader :user, :product, :quantity, :date_added, :occasion
+    attr_reader :username, :product, :quantity, :date_added, :occasion
     @@all = []
 
-    def initialize(user:, product:, quantity:*, date_added:, occasion:*)
-        @user = user
+    def initialize(username:, product:, occasion: "no occasion entered")
+        @username = username
         @product = product
         @quantity = 1
         @date_added = Time.now
