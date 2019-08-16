@@ -1,13 +1,12 @@
 class Product
-    attr_reader :name, :url, :price, :delivery_time, :description
+    attr_reader :name, :url, :price, :delivery_time
     @@all = []
 
-    def initialize(name:, url:, price:, delivery_time: "no delivery time entered", description: "no description entered")
+    def initialize(name:, url:, price:, delivery_time: nil)
         @name = name
         @url = url
-        @price = price
-        @delivery_time = delivery_time
-        @description
+        @price = price.to_f
+        @delivery_time = delivery_time.to_f  #when we ask for the delivery time, tell user to enter in days
         @@all << self
     end
 
